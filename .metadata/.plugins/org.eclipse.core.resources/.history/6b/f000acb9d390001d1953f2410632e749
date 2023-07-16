@@ -1,0 +1,26 @@
+package String_SmartProgramming;
+
+public class P2_RemoveWhiteSpaces {
+	public static void main(String[] args) {
+		String s = "  j a v a  ";
+		String res = "";
+		System.out.println(s);
+		
+		String str = s.trim();      //trim() is only used to remove the leading and the lagging white space
+		System.out.println(str);
+		
+		//Using charAt()
+		for(int i = 0;i<s.length();i++)
+		{
+			if(s.charAt(i) != ' ')
+			{
+				res = res + s.charAt(i);
+			}
+		}
+		System.out.println(res);
+//		Using replaceAll()
+		
+		String s1 = s.replaceAll(" ","");
+		System.out.println(s1);
+	}
+}

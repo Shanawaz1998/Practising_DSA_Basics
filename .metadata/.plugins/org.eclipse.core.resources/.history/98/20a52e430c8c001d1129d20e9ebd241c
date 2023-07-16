@@ -1,0 +1,68 @@
+package LambdaExpression;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.function.Predicate;
+
+public class PredicatesExample {
+
+//	Predicate is a inbuilt functional interface
+//	present inside java.util.function pkg
+//	test() is the abstract method present inside Predicate inteface 
+	
+//	public interface Predicate<T>{
+//		public boolean test(T t)
+//	}
+
+
+
+	public static void main(String[] args) {
+		
+//		Q.1) To find whether the number is greater than 10 or not
+		
+//		Predicate<Integer> p = i -> i > 10;	//Internally it calls the test() method of Predicate interface
+//		System.out.println(p.test(100));
+//		System.out.println(p.test(5));
+//		
+//		Q.2) To find whether the number is even or not
+//		Predicate<Integer> p1 = i -> i%2==0;
+//		System.out.println(p1.test(2));
+//		System.out.println(p1.test(3));
+		
+//		Q.3) To find whether the String starts with the letter 'K' or not
+	
+//		String str [] = {"Katrina", "Kajal", "sunny", "Kiara"};
+//			Predicate<String> p = s1 -> s1.charAt(0) == 'K';
+//			for(String st : str)
+//			{
+//				if(p.test(st))
+//				{
+//					System.out.println(st);
+//				}
+//			}
+		
+		ArrayList<String> al = new ArrayList<>();
+		al.add(null);
+		al.add("abc");
+		al.add("");
+		al.add("xyz");
+		al.add("Shanawaz");
+		al.add(null);
+		al.add("");
+		
+		Predicate<String> p = s -> s != "" && s.length()!=0;
+		for(String str : al)
+		{
+			if(p.test(str))
+			{
+				System.out.println(str);
+			}
+		}
+		
+		
+		
+		
+		
+		
+	}	
+}

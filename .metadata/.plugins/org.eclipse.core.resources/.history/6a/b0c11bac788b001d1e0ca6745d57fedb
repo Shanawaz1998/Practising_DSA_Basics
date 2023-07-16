@@ -1,0 +1,64 @@
+package LambdaExpression;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+public class Test {
+	
+	int eid;
+	String name;
+	int age;
+	
+	public Test(int eid, String name, int age) {
+		super();
+		this.eid = eid;
+		this.name = name;
+		this.age = age;
+	}
+	
+	@Override
+	public String toString() {
+		return "Test [eid=" + eid + ", name=" + name + ", age=" + age + "]";
+	}
+
+	public int getEid() {
+		return eid;
+	}
+
+	public void setEid(int eid) {
+		this.eid = eid;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public static void main(String[] args) {
+		
+		ArrayList<Test> l = new ArrayList<Test>();
+		
+		l.add(new Test(101,"Shanawaz",22));
+		l.add(new Test(102,"Meraj",24));
+		l.add(new Test(103,"Aarif",25));
+		
+		System.out.println(l);
+		Collections.sort(l, (t1, t2) -> (t1.eid < t2.eid)?1:(t1.eid > t2.eid)?-1:0);
+		System.out.println(l);
+		
+		
+	}
+}

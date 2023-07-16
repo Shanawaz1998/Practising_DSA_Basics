@@ -1,0 +1,62 @@
+package LambdaExpression;
+
+import java.util.ArrayList;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+public class Test {
+
+	int id;
+	String name;
+	int age;
+	
+	public Test(int id, String name, int age) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.age = age;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	@Override
+	public String toString() {
+		return "Test [id=" + id + ", name=" + name + ", age=" + age + "]";
+	}
+
+	public static void main(String[] args) {
+		
+		ArrayList<Test> al = new ArrayList<Test>();
+		
+		al.add(new Test(101,"Shanawaz",22));
+		al.add(new Test(102,"meraj",23));
+		al.add(new Test(103,"Aarif",21));
+		
+		String n = al.stream().filter(x -> x.getName().equals("Shanawaz")).collect(Collectors.toList()).toString();
+		System.out.println(n);
+		
+		
+	}
+}

@@ -1,0 +1,51 @@
+package Interview_Question;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class EmployeeObjectList {
+	
+	int id;
+	String name;
+	int age;
+	
+	public EmployeeObjectList(int id, String name, int age) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.age = age;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public String getName() {
+		return name;
+	}
+	public int getAge() {
+		return age;
+	}
+	
+	@Override
+	public String toString() {
+		return "EmployeeObjectList [id=" + id + ", name=" + name + ", age=" + age + "]";
+	}
+
+	public static void main(String[] args) {
+		
+		List<EmployeeObjectList> emp = new ArrayList<EmployeeObjectList>();
+		
+		emp.add(new EmployeeObjectList(101,"Shanawaz",24));
+		emp.add(new EmployeeObjectList(102,"Bahadur",22));
+		emp.add(new EmployeeObjectList(103,"Abdul",45));
+		
+		String names = emp.stream().filter(x -> x.getName().equals("Bahadur")).collect(Collectors.toList()).toString();
+		
+		System.out.println(names);
+
+	}		
+
+}

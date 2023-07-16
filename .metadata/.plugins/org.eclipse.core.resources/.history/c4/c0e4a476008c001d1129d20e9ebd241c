@@ -1,0 +1,39 @@
+package LambdaExpression;
+
+import java.util.function.Predicate;
+
+public class PredicatesExample {
+
+//	Predicate is a inbuilt functional interface
+//	present inside java.util.function pkg
+//	test() is the abstract method present inside Predicate inteface 
+	
+//	public interface Predicate<T>{
+//		public boolean test(T t)
+//	}
+	
+	public static void main(String[] args) {
+//		Predicate<Integer> p = i -> i > 10;	//Internally it calls the test() method of Predicate interface
+//		System.out.println(p.test(100));
+//		System.out.println(p.test(5));
+//		
+//		
+//		Predicate<Integer> p1 = i -> i%2==0;
+//		System.out.println(p1.test(2));
+//		System.out.println(p1.test(3));
+	
+		String str [] = {"Katrina", "Kajal", "sunny", "Kiara"};
+		 
+		for(int i = 0;i<str.length;i++)
+		{
+			Predicate<String> p = s1 -> s1.charAt(0) == 'K';
+			for(String st : str)
+			{
+				if(p.test(st))
+				{
+					System.out.println(str);
+				}
+			}
+		}	
+	}	
+}

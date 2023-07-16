@@ -1,0 +1,53 @@
+package _Comparator_;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+public class Emp{
+	
+	//Comparable used for single sorting logic
+	//Comparator used for multiple sorting logic
+	//Both are used for Custom sorting of the object
+
+	String name;
+	String phone;
+	int empID;
+		
+	public Emp(String name,String phone,int empID)
+	{
+		this.name = name;
+		this.phone = phone;                
+		this.empID = empID;
+	}
+	
+	public String toString()
+	{
+		return name +" "+ phone +" "+ empID;
+	}
+
+	public static void main(String[] args) {
+		 
+		ArrayList<Emp> a = new ArrayList<Emp>();
+		 
+		a.add(new Emp("XYZ","8356817047",102));
+		a.add(new Emp("ABC","123456789",104));
+		a.add(new Emp("PQR","9224173244",101));
+		
+		System.out.println(a);
+	
+		//Comparator - 
+		
+		//In the case of Comparator(Multiple Sorting Logic)
+		// we need to create Specific Class to compare each Attribute
+		Collections.sort(a,(Emp e1, Emp e2)->  e1.empID = e2.empID );
+		System.out.println(a);	
+		
+		Collections.sort(a,new NameComparator());
+		System.out.println(a);
+		
+	}
+	
+	
+
+}

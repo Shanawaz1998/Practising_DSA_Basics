@@ -1,0 +1,10 @@
+package MethodReference;
+
+public class ClassStuff {
+	
+	public static void doStaff()
+	{
+		System.out.println("I am doing some stuff of work");
+	}
+
+}

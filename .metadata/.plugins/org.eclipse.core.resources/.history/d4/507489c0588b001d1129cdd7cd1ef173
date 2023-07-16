@@ -1,0 +1,17 @@
+package LambdaExpression;
+
+@FunctionalInterface
+interface Drawable
+{
+	public void draw();
+}
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		int width =  10;
+		Drawable d = ()-> { System.out.println("Drawing with width : "+width);};
+		d.draw();
+	}
+}
