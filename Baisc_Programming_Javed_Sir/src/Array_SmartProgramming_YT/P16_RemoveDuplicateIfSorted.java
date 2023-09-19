@@ -15,9 +15,6 @@ public class P16_RemoveDuplicateIfSorted {
 				}
 			}
 			temp[j] = a[a.length-1];	//To Enter the last Element in the temp Array because we have used -1 in the for loop
-			
-			
-			
 			for(int x : temp)
 			{
 				System.out.println(x);

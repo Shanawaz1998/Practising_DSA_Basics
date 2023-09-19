@@ -15,6 +15,7 @@ public class P4 {
 		 {
 			 System.out.print(i+" ");
 		 }
+
 		 }
 	}
 

@@ -6,6 +6,7 @@ public class P1_Kth_Element {
 	public static void main(String[] args) {
 		int k =3 ;
 		int a[] = {5,4,3,2,1};
+		//Sorting
 		for(int i = 0;i<a.length;i++)
 		{
 			for(int j = i+1;j<a.length;j++)

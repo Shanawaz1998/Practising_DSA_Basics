@@ -4,7 +4,7 @@ public class P8 {
 
 	public static void main(String[] args) {
 		int a[] = {2,34,3,4,1};
-		int small = a[0];
+		int small = Integer.MAX_VALUE;
 		for (int i = 1;i<a.length;i++)
 		{
 			if(a[i]<small)
