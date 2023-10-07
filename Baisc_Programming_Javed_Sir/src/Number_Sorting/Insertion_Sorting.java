@@ -7,13 +7,13 @@ public class Insertion_Sorting {
 		for(int i=1;i<a.length;i++)
 		{
 			int temp = a[i];
-			int j = i;
-			while(j>0 && a[j-1]>temp)
+			int j = i-1;
+			while(j>=0 && a[j]>temp)
 			{
-				a[j] = a[j-1]; 			//Right shift
+				a[j+1] = a[j]; 			//Right shift
 				j--;
 			}
-			a[j] = temp;
+			a[j+1] = temp;
 		}
 		for(int x : a)
 		{
