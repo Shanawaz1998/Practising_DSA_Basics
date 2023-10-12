@@ -2,7 +2,8 @@ package Number_Sorting;
 
 import java.util.Arrays;
 
-public class Sorting {
+//Good sorting technique for the inputs given in the range 1 to N
+public class CyclicSorting {
     public static void main(String[] args) {
         int a [] = {3,4,2,1,5};
 
@@ -17,8 +18,6 @@ public class Sorting {
                 i++;
             }
         }
-
-
 
 //        Brute force
 //        for(int i = 0;i<a.length;i++){
